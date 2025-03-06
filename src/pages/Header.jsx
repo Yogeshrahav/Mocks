@@ -1,15 +1,3 @@
-// import React from 'react';
-// import User from '../user.json'
-
-// const Header = ({ data }) => {
-//   return (
-//     <header className="container">
-          
-//     </header>
-// }
-
-// export default Header
-
 import React from "react";
 import "../App.css";
 

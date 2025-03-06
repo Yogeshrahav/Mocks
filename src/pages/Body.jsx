@@ -11,16 +11,16 @@ const Body = ({ data }) => {
           <div key={index} className="inner-container">
             <h1> ❛❛ </h1>
             <p>{parse(item.description)}</p>
-            {item.contents && (
+            {item.contents[0] && (
               <div className="author">
-                <img src={item.contents.image.url} alt={item.contents.heading} />
+                <img src={item.contents[0].image.url} alt={item.contents[0].heading} />
                 <div>
-                  <strong>{item.contents.heading}</strong>
-                  <p>{parse(item.contents.description ) }</p>
+                  <strong>{item.contents[0].heading}</strong>
+                  <p>{parse(item.contents[0].description)}</p> 
                 </div>
               </div>
             )}
-            <link className="link">href={item.contentUrl} {parse(item.contentUrlText)}</link> 
+            <a href={item.contentUrl} className="link" dangerouslySetInnerHTML={{ __html: item.contentUrlText }}/>
           </div>
         ))}
       </div>
